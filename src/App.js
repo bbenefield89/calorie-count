@@ -4,6 +4,7 @@ import axios from 'axios';
 import NavBar from './components/misc/NavBar';
 import LoggedInForm from './components/LoggedInForm';
 import LoggedOutForm from './components/LoggedOutForm';
+import Nutrition from './components/Nutrition/Nutrition';
 
 import './App.css';
 
@@ -67,7 +68,7 @@ class App extends Component {
         {
           this.state.authToken
           ?
-            <h1>RETURN NUTRITION</h1>
+            <Nutrition authToken={ this.state.authToken } />
           :
             this.state.loggedIn
             ?
